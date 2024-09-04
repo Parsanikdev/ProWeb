@@ -3,16 +3,21 @@
         "name": "mohammad hasan",
         "family": "mosayyebnezhad",
         "birthDay": 2004,
+        "description":"🚀 React developer",
         "location": "Tehran, iran",
-        "imageLink": "https://github.com/mosayyebnezhad.github.io/personalData/image/main.png",
+        "imageLink": "https://mosayyebnezhad.github.io/personalData/images/main.png",
         "links": [
             {
                 "title": "github",
-                "link": "https:/github.com/mosayyebnezhad"
+                "link": "https://github.com/mosayyebnezhad"
             },
             {
                 "title": "linkedin",
-                "link": "https:/linkedin.com/in/mosayyebnezhad"
+                "link": "https://www.linkedin.com/in/mosayyebnezhad/"
+            },
+            {
+                "title": "figma Cummunity",
+                "link": "https://www.figma.com/cummunity/mosayyebnezhad/"
             }
         ],
         "Phone": [
@@ -47,6 +52,13 @@
             "skills": [
                 "express",
                 "go"
+            ]
+        },
+        {
+            "sideName": "Artist",
+            "skills": [
+                "Figma",
+                "Illustrator"
             ]
         }
     ],

@@ -25,7 +25,7 @@ import {
 
 
 
-import { MoonIcon, SunIcon, CursorArrowIcon, CircleIcon, OpenInNewWindowIcon } from "@radix-ui/react-icons";
+import { MoonIcon, SunIcon, CursorArrowIcon, CircleIcon, OpenInNewWindowIcon, DotFilledIcon } from "@radix-ui/react-icons";
 import { Button } from "../ShadcnComp/components/ui/button";
 import { useTheme } from "next-themes";
 import { useContext } from "react";
@@ -40,14 +40,7 @@ const Navbar = () => {
     return (
         <div className="group mt-6 mx-auto container flex justify-between">
 
-            <h3 className="bg-red-360  scroll-m-20 text-2xl font-semibold tracking-tight 
-            group-hover:animate-pulse
-            justify-around
-            items-center
-    md:w-auto 
-        w-full
-           
-            md:inline flex
+            <h3 className="bg-red-360  scroll-m-20 text-2xl font-semibold tracking-tight group-hover:animate-pulse justify-around items-center md:w-auto w-full md:inline flex
 
 
             ">
@@ -95,7 +88,7 @@ const Navbar = () => {
 
                                                     {item.skills.map((item, index) => {
                                                         return (
-                                                            <li key={index}>{item}</li>
+                                                            <li key={index} className="flex items-center gap-2 my-2" ><DotFilledIcon />{item}</li>
                                                         )
                                                     })}
                                                 </AccordionContent>

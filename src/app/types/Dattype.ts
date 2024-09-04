@@ -10,6 +10,7 @@ export interface PersonalDetail {
     birthDay: number
     location: string
     imageLink: string
+    description:string
     links: Link[]
     Phone: string[]
     education: Education[]

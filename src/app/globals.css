@@ -50,6 +50,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -82,7 +83,31 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
+
+.customBackGrndDark {
+  /* background:
+    linear-gradient(to bottom right, #1a0b27, #9c8cac),
+    linear-gradient(to top right, #9c8cac, #110a18);
+  background-blend-mode: screen; */
+
+  background: blue;
+}
+
+.dark\:customBackGrnd:is(.dark *){
+
+
+
+  background: red;
+}
+
+
+
+
+
+/* d9d2df 9c8cac */
