@@ -1,10 +1,10 @@
 {
-    "personalDetail": { 
+    "personalDetail": {
         "name": "mohammad hasan",
         "family": "mosayyebnezhad",
         "birthDay": 2004,
         "location": "Tehran, iran",
-        "imageLink":"https://github.com/mosayyebnezhad.github.io/personalData/image/main.png",
+        "imageLink": "https://github.com/mosayyebnezhad.github.io/personalData/image/main.png",
         "links": [
             {
                 "title": "github",
@@ -53,6 +53,31 @@
     "Exprepience": [
         {
             "title": "tarkhineh",
+            "rule": "full-stack developer",
+            "Date": {
+                "from": "2020",
+                "to": "PRESENT"
+            },
+            "shortdescryiption": "i created this just for my resume",
+            "description": "The API was created using Express technology, with MongoDB and the Mongoose package. It is available on GitHub and has been launched using the powerful PaaS platform Vercel",
+            "skills": [
+                "express",
+                "next",
+                "react"
+            ],
+            "links": [
+                {
+                    "title": "github",
+                    "link": "https:/github.com/mosayyebnezhad"
+                },
+                {
+                    "title": "vercel",
+                    "link": "https:/tarkhineh-msy.vercel.app"
+                }
+            ]
+        },
+        {
+            "title": "tarkhineh site",
             "rule": "full-stack developer",
             "Date": {
                 "from": "2020",

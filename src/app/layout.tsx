@@ -5,6 +5,7 @@ import { Toaster } from "./Components/ShadcnComp/components/ui/sonner";
 import { ThemeProvider } from "./Components/ShadcnComp/components/theme-provider";
 import { createContext, useState } from "react";
 import { Context } from "./Context";
+import Navbar from "./Components/Navbar/navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        
+
         <Toaster closeButton richColors />
         <ThemeProvider
           attribute="class"
@@ -38,14 +39,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-         
+
+          <Context>
+            <Navbar />
+            {children}
+          </Context>
 
 
-            <Context>
-              {children}
-            </Context>
-
-      
         </ThemeProvider>
 
       </body>

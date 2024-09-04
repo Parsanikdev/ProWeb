@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
 
-      this site is creating by {data?.personalDetail.name}
+      
     </>
   );
 }
