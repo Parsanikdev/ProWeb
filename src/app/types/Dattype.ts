@@ -9,11 +9,13 @@ export interface PersonalDetail {
     family: string
     birthDay: number
     location: string
-    imageLink: string
+    imageLink: string,
+    longdescription:string
     description:string
     links: Link[]
-    Phone: string[]
+    Phone: string
     education: Education[]
+    email:string
 }
 
 export interface Link {
@@ -56,6 +58,7 @@ export interface Link2 {
 
 
 interface IData extends Root{
+    Domain:string,
 }
 
 

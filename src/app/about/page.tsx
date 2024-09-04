@@ -20,7 +20,10 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "../Components/ShadcnComp/components/ui/tooltip";
-import { ReloadIcon } from "@radix-ui/react-icons";
+import { ChatBubbleIcon, EnvelopeClosedIcon, ReloadIcon } from "@radix-ui/react-icons";
+import { toast } from "sonner";
+import IData from "../types/Dattype";
+import { Dialog } from "../Components/AlertDialog/alertDailog";
 
 
 const About = () => {
@@ -45,15 +48,6 @@ const About = () => {
                     I am {data?.personalDetail.name} {data?.personalDetail.family}
                 </h2>
 
-                {/* <h1 className="scroll-m-20 text-4xl font-extrabold 
-                 items-center
-               py-6
-                h-full
-                 tracking-tight lg:text-5xl
-                
-                 ">
-                    
-                </h1> */}
                 <div className="w-10/12 py-6 float-left ">
                     <div className="space-y-1">
                         <h4 className="text-sm font-medium leading-none text-center">About me</h4>
@@ -67,7 +61,8 @@ const About = () => {
                             return (
 
                                 <>
-                                    <div>{item.sideName}</div>
+                                    <Link href={"./" + item.sideName.replace(/[\s-]/g, "")}>
+                                        <div>{item.sideName}</div></Link>
                                     {index !== data.side.length - 1 && <Separator orientation="vertical" />}
 
                                 </>
@@ -105,11 +100,6 @@ const About = () => {
                                     </Tooltip>
                                 </TooltipProvider>
 
-
-
-
-
-
                                 {index !== data.personalDetail.links.length - 1 && <Separator orientation="vertical" />}
 
                             </>
@@ -117,10 +107,73 @@ const About = () => {
                         )
                     })}
 
+                    <Separator orientation="vertical" />
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger>
+
+                             
+
+                                <Dialog title="email" data={data?.personalDetail.email + ""}>
+                                    <EnvelopeClosedIcon />
+                                </Dialog>
+
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>{data?.personalDetail.email}</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+                    <Separator orientation="vertical" />
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger>
+
+
+                                <Dialog title="Email" data={data?.personalDetail.Phone + ""}>
+                                    <ChatBubbleIcon />
+                                </Dialog>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                {data?.personalDetail.Phone}
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+
+
                 </div>
             </div>
 
 
+
+            <div className="w-10/12 mt-8">
+                <h2 className="scroll-m-20 border-b pb-2 text-3xl cursor-pointer font-semibold tracking-tight first:mt-0 hover:animate-pulse active:text-red-800 " id="about"
+                    onClick={() => {
+
+                        toasted(data, "#about")
+                    }}
+                >
+                    #About me
+                </h2>
+                <p className="leading-8 [&:not(:first-child)]:mt-6 opacity-65">
+                    {data?.personalDetail.longdescription}
+                </p>
+            </div>
+
+            <div className="w-10/12 mt-12 float-left">
+                <h2 className="scroll-m-20 border-b pb-2 text-3xl cursor-pointer font-semibold tracking-tight first:mt-0 hover:animate-pulse active:text-red-800 " id="about"
+                    onClick={() => {
+                        navigator.clipboard.writeText(data?.Domain + "/about/#about").then(() => {
+                            toast.success("Link Copied!")
+                        })
+                    }}
+                >
+                    #About me
+                </h2>
+                <p className="leading-8 [&:not(:first-child)]:mt-6 opacity-65">
+                    {data?.personalDetail.longdescription}
+                </p>
+            </div>
 
 
         </div>
@@ -128,3 +181,26 @@ const About = () => {
 }
 
 export default About;
+
+
+
+
+
+const toasted = (data: IData | undefined, ID: string) => {
+
+
+    if (ID[0] === "#") {
+        return (
+            navigator.clipboard.writeText(data?.Domain + "/about/#" + ID).then(() => {
+                toast.success(ID.replace("#", "") + " Link Copied!")
+            })
+        )
+    } else {
+        return (
+            navigator.clipboard.writeText(ID).then(() => {
+                toast.success(ID.replace("#", "") + " Link Copied!")
+            })
+        )
+    }
+
+}
