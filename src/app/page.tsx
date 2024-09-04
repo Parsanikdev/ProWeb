@@ -1,12 +1,18 @@
-import Image from "next/image";
-import Ssr from "./Components/ssr";
-import Csr from "./Components/csr";
+"use client"
+
+
+import { useContext } from "react";
+import { Datastate } from "./Context";
+
 
 export default function Home() {
+
+  const { data } = useContext(Datastate)
+
   return (
     <>
-    <Ssr/>
-    <Csr/>
+
+      this site is creating by {data?.personalDetail.name}
     </>
   );
 }
