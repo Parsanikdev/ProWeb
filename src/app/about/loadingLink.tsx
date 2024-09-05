@@ -122,20 +122,25 @@ const Imagewithloading = (prop: IImage) => {
 
                         <Link href={item.link}>
 
-                            <Image style={{ display: loading ? "none" : "block" }} onLoad={() => {
+                            {/* <Image style={{ display: loading ? "none" : "block" }} onLoad={() => {
                                 console.log(item.title + " loaded")
                                 setloading(false)
 
-                            }} src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
-                            {/* {href} */}
-                            {loading && <ReloadIcon className="animate-spin" />}
+                            }} src={"https://icon.horse/icon/" + extractDomain(item.link) } alt={item.title} width={24} height={24} />
+                           
+                            {loading && <ReloadIcon className="animate-spin" />} */}
+
+
+                            <Image src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
+
+
 
 
                         </Link>
                     </TooltipTrigger>
                     <TooltipContent>
                         <p>{item.title}</p>
-                        {/* <div>{"https://icon.horse/icon/" + extractDomain(item.link)}</div> */}
+
                     </TooltipContent>
                 </Tooltip>
             </TooltipProvider>
