@@ -19,9 +19,13 @@
             {
                 "title": "figma Cummunity",
                 "link": "https://www.figma.com/cummunity/mosayyebnezhad/"
+            },
+            {
+                "title": "personal website",
+                "link": "https://mosayyebnezhad.vercel.app/"
             }
         ],
-        "email":"mohammadmosayyebnezhad@gmail.com",
+        "email": "mohammadmosayyebnezhad@gmail.com",
         "Phone": "09384850116",
         "education": [
             {
@@ -31,10 +35,10 @@
                 "degree": "bacheler degree"
             },
             {
-                "title": "Lahijan University",
+                "title": "mustafa school",
                 "from": "2020",
                 "to": "PRESENT",
-                "degree": "bacheler degree"
+                "degree": "mathematic and physics"
             }
         ]
     },
@@ -113,7 +117,5 @@
             ]
         }
     ],
-    "Domain":"http://localhost:3000"
-
-    
+    "Domain": "http://localhost:3000"
 }
