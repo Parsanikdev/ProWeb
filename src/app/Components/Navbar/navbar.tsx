@@ -54,7 +54,7 @@ const Navbar = () => {
             <NavigationMenu className="md:block hidden">
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <Link href="/" legacyBehavior passHref>
+                        <Link href="../../../../../" legacyBehavior passHref>
                             <NavigationMenuLink active={path == "/" ? true : false} className={navigationMenuTriggerStyle()}>
                                 Home
                             </NavigationMenuLink>
@@ -62,7 +62,7 @@ const Navbar = () => {
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                        <Link href="/about" legacyBehavior passHref>
+                        <Link href="../../../../about" legacyBehavior passHref>
                             <NavigationMenuLink active={path == "/about" ? true : false} className={navigationMenuTriggerStyle()}>
                                 About
                             </NavigationMenuLink>
@@ -112,7 +112,7 @@ const Navbar = () => {
                             {data?.Exprepience.map((item, index) => {
                                 return (
                                     <ul key={index} className="grid w-[240px]  gap-3 p-4 md:w-[360px] md:grid-cols-2 lg:w-[400px] ">
-                                        <Link href={"./experience/" + (item.title).replace(" ", "")} className="flex items-center gap-2">
+                                        <Link href={"../../../../../experience/" + (item.title).replace(" ", "")} className="flex items-center gap-2">
                                             <OpenInNewWindowIcon />  {item.title}
                                         </Link>
                                     </ul>

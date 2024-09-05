@@ -72,7 +72,7 @@ const About = () => {
 
                     </div>
                     <Separator className="my-4 opacity-50" />
-                    <div className="flex h-5 items-center justify-center space-x-4 text-sm">
+                    <div className="flex h-5 items-center justify-center space-x-4 text-sm mb-2">
                         {data?.side.map((item, index) => {
                             return (
 
