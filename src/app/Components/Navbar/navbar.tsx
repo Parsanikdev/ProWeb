@@ -81,7 +81,7 @@ const Navbar = () => {
 
                                 {data?.side.map((item, index) => {
                                     return (
-                                        <>
+                                        <div key={index}>
                                             <AccordionItem value={`item-${index + 1}`}>
                                                 <AccordionTrigger>{item.sideName}</AccordionTrigger>
                                                 <AccordionContent>
@@ -95,7 +95,7 @@ const Navbar = () => {
 
 
                                             </AccordionItem>
-                                        </>
+                                        </div>
                                     )
                                 })}
 

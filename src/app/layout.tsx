@@ -28,8 +28,8 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en" >
-      <body className={poppins.className }>
+    <html lang="en"  suppressHydrationWarning>
+      <body suppressHydrationWarning className={poppins.className }>
 
         <Toaster closeButton richColors />
         <ThemeProvider

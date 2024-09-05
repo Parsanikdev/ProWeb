@@ -1,6 +1,6 @@
 "use client"
 
-import { useContext, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { Datastate } from "../Context";
 import {
     Card,
@@ -60,12 +60,12 @@ const About = () => {
                         {data?.side.map((item, index) => {
                             return (
 
-                                <>
+                                <div key={index}>
                                     <Link href={"./" + item.sideName.replace(/[\s-]/g, "")}>
                                         <div>{item.sideName}</div></Link>
                                     {index !== data.side.length - 1 && <Separator orientation="vertical" />}
 
-                                </>
+                                </div>
 
                             )
                         })}
@@ -77,48 +77,56 @@ const About = () => {
             <div className="w-full py-6 float-left ">
 
                 <div className="flex h-5 items-center justify-center space-x-4 text-sm">
+
                     {data?.personalDetail.links.map((item, index) => {
 
 
 
                         return (
 
-                            <>
+                            <Fragment key={index}>
+
 
 
                                 <TooltipProvider>
                                     <Tooltip>
                                         <TooltipTrigger>
+
                                             <Link href={item.link}>
-                                                <Image hidden={loading} onLoad={() => setloading(false)} src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
-                                                {loading && <ReloadIcon className="animate-spin" />}
+
+                                                <Image src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
+                                                {/* {loading && <ReloadIcon className="animate-spin" />} */}
+                                                {/* {loading ? "roading" : "show"} */}
+
                                             </Link>
                                         </TooltipTrigger>
                                         <TooltipContent>
                                             <p>{item.title}</p>
+                                            <div>{"https://icon.horse/icon/" + extractDomain(item.link)}</div>
                                         </TooltipContent>
                                     </Tooltip>
                                 </TooltipProvider>
 
-                                {index !== data.personalDetail.links.length - 1 && <Separator orientation="vertical" />}
 
-                            </>
+                                {index !== (data.personalDetail.links.length )-1 && <Separator orientation="vertical" />}
 
+
+                            </Fragment>
                         )
                     })}
 
                     <Separator orientation="vertical" />
                     <TooltipProvider>
                         <Tooltip>
-                            <TooltipTrigger>
+                            <div data-state="closed" className="flex items-center">
 
-                             
+
 
                                 <Dialog title="email" data={data?.personalDetail.email + ""}>
                                     <EnvelopeClosedIcon />
                                 </Dialog>
 
-                            </TooltipTrigger>
+                            </div>
                             <TooltipContent>
                                 <p>{data?.personalDetail.email}</p>
                             </TooltipContent>
@@ -127,13 +135,13 @@ const About = () => {
                     <Separator orientation="vertical" />
                     <TooltipProvider>
                         <Tooltip>
-                            <TooltipTrigger>
+                            <div data-state="closed" className="flex items-center">
 
 
                                 <Dialog title="Email" data={data?.personalDetail.Phone + ""}>
                                     <ChatBubbleIcon />
                                 </Dialog>
-                            </TooltipTrigger>
+                            </div>
                             <TooltipContent>
                                 {data?.personalDetail.Phone}
                             </TooltipContent>

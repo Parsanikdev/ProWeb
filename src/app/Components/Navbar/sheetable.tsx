@@ -1,7 +1,7 @@
 "use client"
 
 
-import { DotFilledIcon, DotIcon, HamburgerMenuIcon, MoonIcon, OpenInNewWindowIcon, RocketIcon, SunIcon } from "@radix-ui/react-icons";
+import { DotFilledIcon, HamburgerMenuIcon, MoonIcon, OpenInNewWindowIcon, SunIcon } from "@radix-ui/react-icons";
 import {
     Sheet,
     SheetContent,
@@ -13,14 +13,13 @@ import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
+
     DropdownMenuTrigger,
 } from "../ShadcnComp/components/ui/dropdown-menu"
 
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ShadcnComp/components/ui/accordion";
-import { NavigationMenuItem } from "../ShadcnComp/components/ui/navigation-menu";
+
 import { Button } from "../ShadcnComp/components/ui/button";
 import { useTheme } from "next-themes";
 import { useContext } from "react";
@@ -72,7 +71,7 @@ const Sheetable = () => {
                         <Link href="/" legacyBehavior passHref  >
                             <Button variant={path == "/about" ? "default" : "secondary"}>
                                 Home
-                              
+
                             </Button>
                         </Link>
 
@@ -102,7 +101,7 @@ const Sheetable = () => {
                                 <Accordion type="single" collapsible>
                                     {data?.side.map((item, index) => {
                                         return (
-                                            <>
+                                            <div key={index}>
                                                 <AccordionItem value={`item-${index + 1}`}>
                                                     <AccordionTrigger >
                                                         {item.sideName}
@@ -111,16 +110,16 @@ const Sheetable = () => {
 
                                                         {item.skills.map((item, index) => {
                                                             return (
-                                                                <>
+                                                                <div key={index}>
                                                                     <li key={index} className="flex items-center gap-2 my-2" ><DotFilledIcon />{item}</li>
-                                                                </>
+                                                                </div>
                                                             )
                                                         })}
                                                     </AccordionContent>
 
 
                                                 </AccordionItem>
-                                            </>
+                                            </div>
                                         )
                                     })}
                                 </Accordion>
