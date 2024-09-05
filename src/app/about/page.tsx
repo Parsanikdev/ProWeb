@@ -24,12 +24,11 @@ import { ChatBubbleIcon, EnvelopeClosedIcon, ReloadIcon } from "@radix-ui/react-
 import { toast } from "sonner";
 import IData from "../types/Dattype";
 import { Dialog } from "../Components/AlertDialog/alertDailog";
+import Linkisaboutpage from "./loadingLink";
 
 
 const About = () => {
     const { data } = useContext(Datastate)
-    const [loading, setloading] = useState(true);
-
 
 
 
@@ -76,80 +75,7 @@ const About = () => {
             </Card>
             <div className="w-full py-6 float-left ">
 
-                <div className="flex h-5 items-center justify-center space-x-4 text-sm">
-
-                    {data?.personalDetail.links.map((item, index) => {
-
-
-
-                        return (
-
-                            <Fragment key={index}>
-
-
-
-                                <TooltipProvider>
-                                    <Tooltip>
-                                        <TooltipTrigger>
-
-                                            <Link href={item.link}>
-
-                                                <Image src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
-                                                {/* {loading && <ReloadIcon className="animate-spin" />} */}
-                                                {/* {loading ? "roading" : "show"} */}
-
-                                            </Link>
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>{item.title}</p>
-                                            <div>{"https://icon.horse/icon/" + extractDomain(item.link)}</div>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
-
-
-                                {index !== (data.personalDetail.links.length )-1 && <Separator orientation="vertical" />}
-
-
-                            </Fragment>
-                        )
-                    })}
-
-                    <Separator orientation="vertical" />
-                    <TooltipProvider>
-                        <Tooltip>
-                            <div data-state="closed" className="flex items-center">
-
-
-
-                                <Dialog title="email" data={data?.personalDetail.email + ""}>
-                                    <EnvelopeClosedIcon />
-                                </Dialog>
-
-                            </div>
-                            <TooltipContent>
-                                <p>{data?.personalDetail.email}</p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
-                    <Separator orientation="vertical" />
-                    <TooltipProvider>
-                        <Tooltip>
-                            <div data-state="closed" className="flex items-center">
-
-
-                                <Dialog title="Email" data={data?.personalDetail.Phone + ""}>
-                                    <ChatBubbleIcon />
-                                </Dialog>
-                            </div>
-                            <TooltipContent>
-                                {data?.personalDetail.Phone}
-                            </TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
-
-
-                </div>
+                <Linkisaboutpage />
             </div>
 
 
