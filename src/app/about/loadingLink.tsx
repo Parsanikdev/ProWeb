@@ -14,6 +14,7 @@ import {
 } from "../Components/ShadcnComp/components/ui/tooltip";
 import { ChatBubbleIcon, EnvelopeClosedIcon, ReloadIcon } from "@radix-ui/react-icons";
 import { Dialog } from "../Components/AlertDialog/alertDailog";
+import { LinkType } from "../types/Dattype";
 
 
 
@@ -44,32 +45,7 @@ const Linkisaboutpage = () => {
                 return (
 
                     <Fragment key={index}>
-
-
-
-                        <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger>
-
-                                    <Link href={item.link}>
-
-                                        <Imagewithloading href={"https://icon.horse/icon/" + extractDomain(item.link)}
-                                            alt={item.title} height={24} width={24}
-                                        />
-
-
-                                    </Link>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p>{item.title}</p>
-                                    <div>{"https://icon.horse/icon/" + extractDomain(item.link)}</div>
-                                </TooltipContent>
-                            </Tooltip>
-                        </TooltipProvider>
-
-
-                        {index !== (data.personalDetail.links.length) - 1 && <Separator orientation="vertical" />}
-
+                        <Imagewithloading item={item} index={index} DAtalenght={data.personalDetail.links.length} />
 
                     </Fragment>
                 )
@@ -78,15 +54,17 @@ const Linkisaboutpage = () => {
             <Separator orientation="vertical" />
             <TooltipProvider>
                 <Tooltip>
-                    <div data-state="closed" className="flex items-center">
+                    <TooltipTrigger asChild className="flex items-center">
 
 
 
-                        <Dialog title="email" data={data?.personalDetail.email + ""}>
-                            <EnvelopeClosedIcon />
-                        </Dialog>
+                        <span>
+                            <Dialog title="email" data={data?.personalDetail.email + ""}>
+                                <EnvelopeClosedIcon />
+                            </Dialog>
+                        </span>
 
-                    </div>
+                    </TooltipTrigger>
                     <TooltipContent>
                         <p>{data?.personalDetail.email}</p>
                     </TooltipContent>
@@ -95,13 +73,15 @@ const Linkisaboutpage = () => {
             <Separator orientation="vertical" />
             <TooltipProvider>
                 <Tooltip>
-                    <div data-state="closed" className="flex items-center">
 
+                    <TooltipTrigger asChild className="flex items-center">
+                        <span>
+                            <Dialog title="Email" data={data?.personalDetail.Phone + ""}>
+                                <ChatBubbleIcon />
+                            </Dialog>
+                        </span>
 
-                        <Dialog title="Email" data={data?.personalDetail.Phone + ""}>
-                            <ChatBubbleIcon />
-                        </Dialog>
-                    </div>
+                    </TooltipTrigger>
                     <TooltipContent>
                         {data?.personalDetail.Phone}
                     </TooltipContent>
@@ -120,27 +100,52 @@ export default Linkisaboutpage;
 
 
 interface IImage {
-    href: string,
-    alt: string,
-    width: number,
-    height: number
+    item: LinkType,
+    index: number,
+    DAtalenght: number
+
 }
 const Imagewithloading = (prop: IImage) => {
 
-    const { alt, height, href, width } = prop
+    const { item, index, DAtalenght } = prop
 
 
     const [loading, setloading] = useState(true)
     return (
         <>
 
-            <Image hidden={loading} onLoad={() => {
-                console.log(alt + " loaded")
-                setloading(false)
 
-            }} src={href} alt={alt} width={width} height={height} />
 
-            {loading && <ReloadIcon className="animate-spin" />}
+            <TooltipProvider>
+                <Tooltip>
+                    <TooltipTrigger>
+
+                        <Link href={item.link}>
+
+                            <Image style={{ display: loading ? "none" : "block" }} onLoad={() => {
+                                console.log(item.title + " loaded")
+                                setloading(false)
+
+                            }} src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
+                            {/* {href} */}
+                            {loading && <ReloadIcon className="animate-spin" />}
+
+
+                        </Link>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>{item.title}</p>
+                        {/* <div>{"https://icon.horse/icon/" + extractDomain(item.link)}</div> */}
+                    </TooltipContent>
+                </Tooltip>
+            </TooltipProvider>
+
+
+            {index !== (DAtalenght - 1) && <Separator orientation="vertical" />}
+
+
+
+
         </>
 
 

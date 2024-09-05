@@ -26,7 +26,7 @@ export const Dialog = (prop: Iprop) => {
 
     const { data } = useContext(Datastate)
     return (
-        <AlertDialog>
+        <AlertDialog >
             <AlertDialogTrigger>{prop.children}</AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>

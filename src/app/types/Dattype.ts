@@ -12,13 +12,13 @@ export interface PersonalDetail {
     imageLink: string,
     longdescription:string
     description:string
-    links: Link[]
+    links: LinkType[]
     Phone: string
     education: Education[]
     email:string
 }
 
-export interface Link {
+export interface LinkType {
     title: string
     link: string
 }
