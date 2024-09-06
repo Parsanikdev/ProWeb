@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="container mt-6 mx-auto flex items-center flex-wrap justify-around ">
+      <div className="container mt-14 mx-auto flex items-center flex-wrap justify-around ">
 
         <Separator className="lg:hidden" />
         <div>
@@ -49,7 +49,7 @@ export default function Home() {
           </p>
         </div>
        
-        <Image loading="lazy" width={360} height={360} src={data?.personalDetail.imageLink || ""} alt={`${data?.personalDetail.name} ${data?.personalDetail.family}'s personal image`} />
+        <Image loading="lazy" width={480} height={480} src={data?.personalDetail.imageLink || ""} alt={`${data?.personalDetail.name} ${data?.personalDetail.family}'s personal image`} />
         <Card className="w-full mb-8 py-10 float-left ">
           <div className="w-10/12 mt-8 mx-auto">
             <div className="scroll-m-20 text-xl font-semibold tracking-tight">
