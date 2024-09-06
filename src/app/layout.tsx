@@ -10,6 +10,7 @@ import Footer from "./Components/footer/footer";
 import NextTopLoader from 'nextjs-toploader';
 
 
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: "500"
@@ -69,3 +70,4 @@ export default function RootLayout({
     </html >
   );
 }
+
