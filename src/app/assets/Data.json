@@ -5,7 +5,7 @@
         "birthDay": 2004,
         "description": "🚀 React developer",
         "longdescription": "I'm Mohammad Hasan, a passionate software developer with a deep interest in programming and technology. From a young age, I was drawn to the world of coding and IT, and over the years, I have honed my skills in various fields such as web development, application design, and modern software solutions.I specialize in programming languages like JavaScript, Node.js, and have experience working with frameworks like Next.js. My goal is to continuously grow as a developer, always learning new technologies and improving my craft to deliver high-quality, efficient software solutions.",
-        "location": "Tehran, iran",
+        "location": "Gilan, iran",
         "imageLink": "https://mosayyebnezhad.github.io/personalData/images/main.png",
         "links": [
             {
@@ -18,11 +18,11 @@
             },
             {
                 "title": "figma Cummunity",
-                "link": "https://www.figma.com/cummunity/mosayyebnezhad/"
+                "link": "https://www.figma.com/@mosayyebnezhad/"
             },
             {
-                "title": "personal website",
-                "link": "https://mosayyebnezhad.vercel.app/"
+                "title": "X",
+                "link": "https://x.com/mosayyebnezhad"
             }
         ],
         "email": "mohammadmosayyebnezhad@gmail.com",
@@ -30,42 +30,59 @@
         "education": [
             {
                 "title": "Lahijan University",
-                "from": "2020",
+                "from": "2023",
                 "to": "PRESENT",
                 "degree": "bacheler degree"
-            },
-            {
-                "title": "mustafa school",
-                "from": "2020",
-                "to": "PRESENT",
-                "degree": "mathematic and physics"
             }
         ]
     },
     "side": [
         {
-            "sideName": "React developer",
+            "sideName": "Front-end developer",
             "skills": [
                 "react",
-                "next"
+                "next",
+                "typescript",
+                "tailwind"
             ]
         },
         {
             "sideName": "back-end developer",
             "skills": [
                 "express",
-                "go"
-            ]
-        },
-        {
-            "sideName": "Artist",
-            "skills": [
-                "Figma",
-                "Illustrator"
+                "Go",
+                "mongoDB"
             ]
         }
     ],
     "Exprepience": [
+        {
+            "title": "ProWeb",
+            "id": "Proweb",
+            "rule": "front-end developer",
+            "Image": "https://github.com/mosayyebnezhad/ProWeb/raw/main/Data/Presentation.svg",
+            "Date": {
+                "from": "2024-sep-4",
+                "to": "2024-sep-7"
+            },
+            "shortdescryiption": "A professional, clonable, open-source personal website.",
+            "description": "A professional-grade website template using the latest web technologies. Perfect for creating modern, high-performance websites. ",
+            "skills": [
+                "next",
+                "tailwind",
+                "shadcnUI"
+            ],
+            "links": [
+                {
+                    "title": "github",
+                    "link": "https:/github.com/mosayyebnezhad/proweb"
+                },
+                {
+                    "title": "vercel",
+                    "link": "https:/mosayyebnezhad.ir"
+                }
+            ]
+        },
         {
             "title": "tarkhineh",
             "id": "mosayyebnezhadtarkhineh",
@@ -75,20 +92,15 @@
                 "from": "2020",
                 "to": "PRESENT"
             },
-            "shortdescryiption": "i created this just for my resume",
+            "shortdescryiption": "online resturant Website",
             "description": "The API was created using Express technology, with MongoDB and the Mongoose package. It is available on GitHub and has been launched using the powerful PaaS platform Vercel",
             "skills": [
+                "react",
                 "express",
-                "next",
-                "react",
-                "asp.net",
+                "sass",
+                "JWT",
                 "mongoDB",
-                "mongoose",
-                "graphql",
-                "next",
-                "react",
-                "asp.net",
-                "mongoDB"
+                "mongoose"
             ],
             "links": [
                 {
@@ -103,28 +115,31 @@
         },
         {
             "title": "Memoist",
-            "id": "mosayyebnezhadMemoist",
+            "id": "memoist",
             "rule": "full-stack developer",
-            "Image": "https://raw.githubusercontent.com/mosayyebnezhad/memoist/main/Data/Presentation.svg",
+            "Image": "https://github.com/mosayyebnezhad/memoist/raw/main/Data/Presentation.svg",
             "Date": {
-                "from": "2020",
-                "to": "2023"
+                "from": "",
+                "to": "PRESENT"
             },
-            "shortdescryiption": "i created this just for my resume",
-            "description": "The API was created using Express technology, with MongoDB and the Mongoose package. It is available on GitHub and has been launched using the powerful PaaS platform Vercel",
+            "shortdescryiption": "saving note App",
+            "description": "the ultimate app designed to help you keep track of your tasks, appointments, and important notes with ease. Whether you're managing a busy schedule or simply need a reliable tool to remember everyday details, Memoist is here to ensure you never miss a beat.",
             "skills": [
-                "express",
                 "next",
-                "react"
+                "tailwind",
+                "shadcnUI",
+                "express",
+                "react-query",
+                "redux"
             ],
             "links": [
                 {
                     "title": "github",
-                    "link": "https:/github.com/mosayyebnezhad"
+                    "link": "https:/github.com/mosayyebnezhad/memoist"
                 },
                 {
                     "title": "vercel",
-                    "link": "https:/tarkhineh-msy.vercel.app"
+                    "link": "https:/mosayyebnezhad.ir"
                 }
             ]
         }
