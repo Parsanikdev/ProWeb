@@ -24,9 +24,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./Components/ShadcnComp/components/ui/tooltip";
-
-import * as serviceWorkerRegistration from '@/serviceWorkerRegistration';
-
 export default function Home() {
 
   const { data } = useContext(Datastate)
@@ -182,6 +179,3 @@ const GetbackListInListLINK = ({ data }: { data: IData | undefined }) => {
     </Fragment>
   )
 }
-
-serviceWorkerRegistration.register()
-
