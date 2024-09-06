@@ -12,6 +12,11 @@ const nextConfig = {
             hostname: 'icon.horse',
             pathname: '/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'repository-images.githubusercontent.com',
+            pathname: '/**',
+          },
         ],
       },
    

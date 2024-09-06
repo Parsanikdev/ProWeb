@@ -10,12 +10,12 @@ export interface PersonalDetail {
     birthDay: number
     location: string
     imageLink: string,
-    longdescription:string
-    description:string
+    longdescription: string
+    description: string
     links: LinkType[]
     Phone: string
     education: Education[]
-    email:string
+    email: string
 }
 
 export interface LinkType {
@@ -43,6 +43,8 @@ export interface Exprepience {
     description: string
     skills: string[]
     links: Link2[]
+    id: string
+    Image: string
 }
 
 export interface Date {
@@ -57,8 +59,8 @@ export interface Link2 {
 
 
 
-interface IData extends Root{
-    Domain:string,
+interface IData extends Root {
+    Domain: string,
 }
 
 

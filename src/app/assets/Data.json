@@ -1,6 +1,6 @@
 {
     "personalDetail": {
-        "name": "mohammad hasan",
+        "name": "mohammad",
         "family": "mosayyebnezhad",
         "birthDay": 2004,
         "description": "🚀 React developer",
@@ -68,7 +68,9 @@
     "Exprepience": [
         {
             "title": "tarkhineh",
+            "id": "mosayyebnezhadtarkhineh",
             "rule": "full-stack developer",
+            "Image": "https://repository-images.githubusercontent.com/833374287/5387f4c1-fe81-47e5-9a06-ad2839d690ec",
             "Date": {
                 "from": "2020",
                 "to": "PRESENT"
@@ -78,7 +80,15 @@
             "skills": [
                 "express",
                 "next",
-                "react"
+                "react",
+                "asp.net",
+                "mongoDB",
+                "mongoose",
+                "graphql",
+                "next",
+                "react",
+                "asp.net",
+                "mongoDB"
             ],
             "links": [
                 {
@@ -92,11 +102,13 @@
             ]
         },
         {
-            "title": "tarkhineh site",
+            "title": "Memoist",
+            "id": "mosayyebnezhadMemoist",
             "rule": "full-stack developer",
+            "Image": "https://raw.githubusercontent.com/mosayyebnezhad/memoist/main/Data/Presentation.svg",
             "Date": {
                 "from": "2020",
-                "to": "PRESENT"
+                "to": "2023"
             },
             "shortdescryiption": "i created this just for my resume",
             "description": "The API was created using Express technology, with MongoDB and the Mongoose package. It is available on GitHub and has been launched using the powerful PaaS platform Vercel",
