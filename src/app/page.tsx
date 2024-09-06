@@ -1,7 +1,7 @@
 "use client"
 
 
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useState } from "react";
 import { Datastate } from "./Context";
 import Image from "next/image";
 import { Card } from "./Components/ShadcnComp/components/ui/card";
@@ -48,6 +48,7 @@ export default function Home() {
             {data?.personalDetail.description}
           </p>
         </div>
+       
         <Image loading="lazy" width={360} height={360} src={data?.personalDetail.imageLink || ""} alt={`${data?.personalDetail.name} ${data?.personalDetail.family}'s personal image`} />
         <Card className="w-full mb-8 py-10 float-left ">
           <div className="w-10/12 mt-8 mx-auto">
@@ -92,7 +93,8 @@ const GetbackListInList = ({ data }: { data: IData | undefined }) => {
   return (
     <Fragment >
       <Carousel className="lg:w-6/12  w-11/12 mx-auto" >
-        <CarouselContent className="-ml-4 cursor-pointer">
+      
+        <CarouselContent className="cursor-pointer">
           {
             data?.side.map((item, index) => {
               return (
@@ -103,8 +105,8 @@ const GetbackListInList = ({ data }: { data: IData | undefined }) => {
                       return (
                         <Fragment key={indexi}>
 
-                          <CarouselItem className="basis-1/2 text-center">
-                            <Card>  {itemi}   </Card>
+                          <CarouselItem className="md:basis-1/4 text-center">
+                            <Card>{itemi}</Card>
                           </CarouselItem>
 
 
@@ -158,7 +160,7 @@ const GetbackListInListLINK = ({ data }: { data: IData | undefined }) => {
                         </Link>
                       </TooltipTrigger>
                       <TooltipContent>
-                      <p>{item.title}</p>
+                        <p>{item.title}</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>

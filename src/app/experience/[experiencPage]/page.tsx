@@ -25,7 +25,7 @@ import { CircleIcon, ExternalLinkIcon, Link2Icon, RocketIcon } from "@radix-ui/r
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useState } from "react";
 import { toast } from "sonner";
 
 
@@ -62,9 +62,10 @@ const Page = () => {
 
 
                 <Link href={Thisdata?.links[1].link || ""}>
-                    <Image
-                        className="w-10/12 mx-auto h-48 hover:h-[400px] hover:rounded-2xl hover:opacity-100 cursor-pointer transition-all duration-500 opacity-80 rounded-md object-cover"
-                        width={800} height={400} src={Thisdata?.Image || ""} alt="none" />
+
+
+
+                    <ImagewithLoader src={Thisdata?.Image} alt="none" />
                 </Link>
                 <div className="w-10/12 mx-auto md:flex md:justify-between">
                     <blockquote className="lg:w-5/12 mx-auto my-6 border-l-2  pl-6  text-sm">
@@ -118,22 +119,14 @@ const Page = () => {
                 </div>
                 <div className="w-10/12 mx-auto md:flex md:justify-center gap-3">
 
-                    {/* {Thisdata?.skills.map((item, index) => {
-                        return (
-                            <Fragment key={index}>
-                                <Card className="px-12 py-1"> {item}</Card>
-                            </Fragment>
-                        )
-                    })} */}
 
-
-                    <Carousel className="lg:w-6/12   w-10/12 mx-auto">
-                        <CarouselContent>
+                    <Carousel className="lg:w-6/12 w-10/12 mx-auto">
+                        <CarouselContent className={(((Thisdata?.skills.length) || 0) <= 3) ? "flex justify-center" : ""}>
 
                             {Thisdata?.skills.map((item, index) => {
                                 return (
                                     <Fragment key={index}>
-                                        <CarouselItem className="basis-1/3">
+                                        <CarouselItem className="md:basis-1/4">
                                             <Card className="text-center py-1">{item}</Card>
                                         </CarouselItem>
                                     </Fragment>
@@ -161,7 +154,7 @@ const Page = () => {
 
 
                     <h2 className=" scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-                     About {Thisdata?.title}
+                        About {Thisdata?.title}
                     </h2>
                     <p className="leading-7 [&:not(:first-child)]:mt-6">
                         {Thisdata?.description}
@@ -194,3 +187,39 @@ const toasted = (domain: string | undefined, data: Exprepience | undefined) => {
 
 }
 
+const ImagewithLoader = ({ src, alt }: { src: string | undefined, alt: string | undefined }) => {
+    const [loading, setLoading] = useState(true);
+
+    return (
+        <Fragment>
+            {loading && (
+                <div className="bg-gray-50 animate-pulse w-10/12 ml-[8%] h-48 cursor-not-allowed rounded-md"></div>
+            )}
+
+            <div className="relative w-10/12 mx-auto h-48 hover:h-[400px] transition-all duration-500 opacity-60
+                hover:opacity-100
+            "
+                style={{
+                    position: loading ? "absolute" : "relative",
+                    opacity: loading ? "0" : "1",
+
+                }}
+            >
+                <Image
+                    className="w-full h-full object-cover rounded-md  "
+                    src={src || ""}
+                    alt={alt || ""}
+                    layout="fill"
+                    onLoad={() => {
+
+                        console.log("comlete")
+                        setLoading(false)
+                    }}
+
+                />
+            </div>
+        </Fragment>
+
+
+    );
+}
