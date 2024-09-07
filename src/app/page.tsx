@@ -47,7 +47,7 @@ export default function Home() {
             {data?.personalDetail.description}
           </p>
         </div>
-       
+
         <Image loading="lazy" width={480} height={480} src={data?.personalDetail.imageLink || ""} alt={`${data?.personalDetail.name} ${data?.personalDetail.family}'s personal image`} />
         <Card className="w-full mb-8 py-10 float-left ">
           <div className="w-10/12 mt-8 mx-auto">
@@ -92,7 +92,7 @@ const GetbackListInList = ({ data }: { data: IData | undefined }) => {
   return (
     <Fragment >
       <Carousel className="lg:w-6/12  w-11/12 mx-auto" >
-      
+
         <CarouselContent className="cursor-pointer">
           {
             data?.side.map((item, index) => {
@@ -104,8 +104,10 @@ const GetbackListInList = ({ data }: { data: IData | undefined }) => {
                       return (
                         <Fragment key={indexi}>
 
-                          <CarouselItem className="md:basis-1/4 text-center">
-                            <Card>{itemi}</Card>
+                          <CarouselItem className="basis-auto flex justify-center items-center">
+                            <Card
+                            className="justify-center items-center px-5 py-1 font-thin text-sm"
+                            >{itemi}</Card>
                           </CarouselItem>
 
 
@@ -150,7 +152,7 @@ const GetbackListInListLINK = ({ data }: { data: IData | undefined }) => {
                     <Tooltip>
                       <TooltipTrigger>
                         <Link href={item.link}>
-                          <Card className="flex justify-center items-center gap-3 px-8 py-1">
+                          <Card className="flex justify-center items-center gap-3 px-8 py-1 font-thin">
                             <Image src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
 
 

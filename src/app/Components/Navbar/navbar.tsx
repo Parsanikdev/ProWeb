@@ -18,8 +18,6 @@ import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "../ShadcnComp/components/ui/dropdown-menu"
 
@@ -77,13 +75,13 @@ const Navbar = () => {
                     <NavigationMenuItem >
                         <NavigationMenuTrigger className={path == "/stacks" ? "bg-accent/50" : ""}>Stacks</NavigationMenuTrigger>
                         <NavigationMenuContent className="flex justify-center md:w-[420px]">
-                            <Accordion type="multiple" className=" w-[200px] md:w-[300px] py-2 lg:w-[360px]">
+                            <Accordion type="multiple" className=" w-[420px]">
 
 
                                 {data?.side.map((item, index) => {
                                     return (
                                         <div key={index}>
-                                            <AccordionItem value={`item-${index + 1}`}>
+                                            <AccordionItem value={`item-${index + 1}`} className="w-[380px] mx-auto">
                                                 <AccordionTrigger>{item.sideName}</AccordionTrigger>
                                                 <AccordionContent>
 
@@ -109,23 +107,20 @@ const Navbar = () => {
 
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className={path == "/experience" ? "bg-accent/50" : ""}>Experience</NavigationMenuTrigger>
-                        <NavigationMenuContent className="md:w-[420px]">
+                        <NavigationMenuContent className="w-[420px]">
                             {data?.Exprepience.map((item, index) => {
                                 return (
                                     <Fragment key={index}>
-                                        <ul className="grid   gap-3 p-4  md:grid-cols-2  ">
-                                            <Link href={"../../../../../experience/" + item.id} className="flex items-center w-[380px]  gap-2">
+                                        <ul className="w-[420px] px-[20px] py-3">
+                                            <Link href={"../../../../../experience/" + item.id} className="flex items-center gap-2">
                                                 <OpenInNewWindowIcon />  {item.title}
                                             </Link>
 
                                         </ul>
-
                                         <Separator orientation="horizontal" />
                                     </Fragment>
                                 )
                             })}
-
-
                         </NavigationMenuContent>
                     </NavigationMenuItem>
 

@@ -103,6 +103,7 @@ const Page = () => {
 
                         </h4>
                     </Card>
+
                     <Card className="py-3 md:w-5/12 w-full px-3 my-2">
                         <h4 className="scroll-m-20 text-sm font-normal tracking-tight">
                             Launch on the
@@ -114,41 +115,34 @@ const Page = () => {
                         </h4>
                     </Card>
                 </div>
+
+
                 <div className="container my-8 opacity-95">
+
+
                     <h2 className="scroll-m-20 border-b pb-2 container text-2xl font-semibold tracking-tight first:mt-0
                  lg:w-6/12 w-10/12 mx-auto 
                 ">
                         {"technology I've used"}
                     </h2>
+
+
+
                 </div>
-                <div className="w-10/12 mx-auto md:flex md:justify-center gap-3">
-
-
-                    <Carousel className="lg:w-6/12 w-10/12 mx-auto">
-                        <CarouselContent className={(((Thisdata?.skills.length) || 0) <= 3) ? "md:flex md:justify-center" : ""}>
-
-                            {Thisdata?.skills.map((item, index) => {
-                                return (
-                                    <Fragment key={index}>
-                                        <CarouselItem className="md:basis-1/4 basis-1/2">
-                                            <Card className="text-center py-1">{item}</Card>
-                                        </CarouselItem>
-                                    </Fragment>
-                                )
-                            })}
-                        </CarouselContent>
-
-
-                        <CarouselPrevious className="" />
-                        <CarouselNext />
 
 
 
+                {/* <div className="w-10/12 mx-auto md:flex md:justify-center gap-3"> */}
+                <div className="container ">
+                    <div className="w-10/12 lg:w-6/12 mx-auto flex flex-wrap gap-3 md:justify-start justify-center">
+                        {Thisdata?.skills.map((item, index) => {
+                            return (
+                                <Card key={index} className="text-center py-1 px-5">{item}</Card>
+                            )
+                        })}
 
 
-                    </Carousel>
-
-
+                    </div>
                 </div>
 
 
@@ -158,8 +152,8 @@ const Page = () => {
                     <h2 className=" scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
                         About {Thisdata?.title}
                     </h2>
-                    <p className="leading-7 [&:not(:first-child)]:mt-6">
-                        {Thisdata?.description}
+                    <p className="leading-7 [&:not(:first-child)]:mt-6 opacity-70">
+                           {Thisdata?.description}
                     </p>
 
 
