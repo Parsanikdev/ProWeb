@@ -28,11 +28,12 @@ import {
 import { MoonIcon, SunIcon, CursorArrowIcon, CircleIcon, OpenInNewWindowIcon, DotFilledIcon } from "@radix-ui/react-icons";
 import { Button } from "../ShadcnComp/components/ui/button";
 import { useTheme } from "next-themes";
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { Datastate } from "@/app/Context";
 import Sheetable from "./sheetable";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ShadcnComp/components/ui/accordion";
 import { usePathname } from "next/navigation";
+import { Separator } from "../ShadcnComp/components/ui/separator";
 const Navbar = () => {
     const { data } = useContext(Datastate)
     const { setTheme } = useTheme()
@@ -75,8 +76,8 @@ const Navbar = () => {
 
                     <NavigationMenuItem >
                         <NavigationMenuTrigger className={path == "/stacks" ? "bg-accent/50" : ""}>Stacks</NavigationMenuTrigger>
-                        <NavigationMenuContent className="flex justify-center w-[240px] md:w-[360px]  lg:w-[400px]">
-                            <Accordion type="single" className=" w-[200px] md:w-[300px]  lg:w-[360px]">
+                        <NavigationMenuContent className="flex justify-center md:w-[420px]">
+                            <Accordion type="multiple" className=" w-[200px] md:w-[300px] py-2 lg:w-[360px]">
 
 
                                 {data?.side.map((item, index) => {
@@ -108,14 +109,19 @@ const Navbar = () => {
 
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className={path == "/experience" ? "bg-accent/50" : ""}>Experience</NavigationMenuTrigger>
-                        <NavigationMenuContent>
+                        <NavigationMenuContent className="md:w-[420px]">
                             {data?.Exprepience.map((item, index) => {
                                 return (
-                                    <ul key={index} className="grid w-[240px]  gap-3 p-4 md:w-[360px] md:grid-cols-2 lg:w-[400px] ">
-                                        <Link href={"../../../../../experience/" + item.id} className="flex items-center gap-2">
-                                            <OpenInNewWindowIcon />  {item.title}
-                                        </Link>
-                                    </ul>
+                                    <Fragment key={index}>
+                                        <ul className="grid   gap-3 p-4  md:grid-cols-2  ">
+                                            <Link href={"../../../../../experience/" + item.id} className="flex items-center w-[380px]  gap-2">
+                                                <OpenInNewWindowIcon />  {item.title}
+                                            </Link>
+
+                                        </ul>
+
+                                        <Separator orientation="horizontal" />
+                                    </Fragment>
                                 )
                             })}
 

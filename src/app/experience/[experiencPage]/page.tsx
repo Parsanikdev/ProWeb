@@ -62,9 +62,6 @@ const Page = () => {
 
 
                 <Link href={Thisdata?.links[1].link || ""}>
-
-
-
                     <ImagewithLoader src={Thisdata?.Image} alt="none" />
                 </Link>
                 <div className="w-10/12 mx-auto md:flex md:justify-between">
