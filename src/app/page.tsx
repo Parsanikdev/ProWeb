@@ -104,9 +104,9 @@ const GetbackListInList = ({ data }: { data: IData | undefined }) => {
                       return (
                         <Fragment key={indexi}>
 
-                          <CarouselItem className="basis-auto flex justify-center items-center">
+                          <CarouselItem className="md:basis-1/3 flex justify-center">
                             <Card
-                            className="justify-center items-center px-5 py-1 font-thin text-sm"
+                              className="w-10/12  md:w-36 text-center py-1 font-thin text-sm"
                             >{itemi}</Card>
                           </CarouselItem>
 
@@ -143,22 +143,15 @@ const GetbackListInListLINK = ({ data }: { data: IData | undefined }) => {
           {data?.personalDetail.links.map((item, index) => {
             return (
               <Fragment key={index}>
-                <CarouselItem className="basis-auto md:basis-1/3 flex justify-center items-center">
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <Link href={item.link}>
-                          <Card className="flex justify-center items-center gap-3 px-8 py-1 font-thin">
-                            <Image src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
-                            <p className="text-nowrap text-sm" >{(item.title).substring(0, 6)}{((item.title).length > 8) && "..."}</p>
-                          </Card>
-                        </Link>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{item.title}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
+                <CarouselItem className="md:basis-1/3 flex justify-center">
+
+                  <Card className=" w-10/12 md:w-36 text-center py-1 font-thin text-sm">
+                    <Link href={item.link} className="flex justify-center gap-3">
+                      <Image src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
+                      <p className="text-nowrap text-sm" >{(item.title).substring(0, 6)}{((item.title).length > 8) && "..."}</p>
+                    </Link>
+                  </Card>
+
 
 
                 </CarouselItem>
