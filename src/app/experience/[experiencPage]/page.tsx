@@ -98,14 +98,14 @@ const Page = () => {
                     <Card className="py-3 md:w-5/12 w-full px-3 my-2">
                         <h4 className="scroll-m-20 text-sm font-normal tracking-tight">
                             Source on the
-                            <a href={Thisdata?.links[0].link} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[0].title}</a>
+                            <Link href={Thisdata?.links[0].link || ""} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[0].title}</Link>
 
                         </h4>
                     </Card>
                     <Card className="py-3 md:w-5/12 w-full px-3 my-2">
                         <h4 className="scroll-m-20 text-sm font-normal tracking-tight">
                             Launch on the
-                            <a href={Thisdata?.links[1].link} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[1].title}</a>
+                            <Link href={Thisdata?.links[1].link || ""} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[1].title}</Link>
 
                         </h4>
                     </Card>
