@@ -129,7 +129,7 @@
                 "tailwind",
                 "shadcnUI",
                 "express",
-                "react-query",
+                "reactquery",
                 "redux"
             ],
             "links": [

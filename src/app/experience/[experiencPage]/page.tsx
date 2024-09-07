@@ -99,14 +99,30 @@ const Page = () => {
                         <h4 className="scroll-m-20 text-sm font-normal tracking-tight">
                             Source on the
                             <Link href={Thisdata?.links[0].link || ""} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[0].title}</Link>
-
+                           |
+                            <a
+                                href={Thisdata?.links[0].link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <ExternalLinkIcon className="inline" />
+                                {Thisdata?.links[0].title}
+                            </a>
                         </h4>
                     </Card>
                     <Card className="py-3 md:w-5/12 w-full px-3 my-2">
                         <h4 className="scroll-m-20 text-sm font-normal tracking-tight">
                             Launch on the
                             <Link href={Thisdata?.links[1].link || ""} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[1].title}</Link>
-
+                            |
+                            <a
+                                href={Thisdata?.links[1].link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <ExternalLinkIcon className="inline" />
+                                {Thisdata?.links[1].title}
+                            </a>
                         </h4>
                     </Card>
                 </div>
@@ -121,27 +137,25 @@ const Page = () => {
 
 
                     <Carousel className="lg:w-6/12 w-10/12 mx-auto">
-                        <CarouselContent className={(((Thisdata?.skills.length) || 0) <= 3) ? "flex justify-center" : ""}>
+                        <CarouselContent className={(((Thisdata?.skills.length) || 0) <= 3) ? "md:flex md:justify-center" : ""}>
 
                             {Thisdata?.skills.map((item, index) => {
                                 return (
                                     <Fragment key={index}>
-                                        <CarouselItem className="md:basis-1/4">
+                                        <CarouselItem className="md:basis-1/4 basis-1/2">
                                             <Card className="text-center py-1">{item}</Card>
                                         </CarouselItem>
                                     </Fragment>
                                 )
                             })}
                         </CarouselContent>
-                        {(((Thisdata?.skills.length) || 0) > 3) &&
 
-                            <>
 
-                                <CarouselPrevious />
-                                <CarouselNext />
-                            </>
+                        <CarouselPrevious className="" />
+                        <CarouselNext />
 
-                        }
+
+
 
 
                     </Carousel>
