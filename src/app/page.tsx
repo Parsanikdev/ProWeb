@@ -9,7 +9,7 @@ import { Separator } from "./Components/ShadcnComp/components/ui/separator";
 import { Button } from "./Components/ShadcnComp/components/ui/button";
 import Link from "next/link";
 import IData from "./types/Dattype";
-import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+import { ArrowRightIcon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 import {
   Carousel,
   CarouselContent,
@@ -74,8 +74,8 @@ export default function Home() {
           <Separator className="mt-6 w-8/12 mx-auto" />
           <div className="mt-8 w-80 mx-auto">
             <Link href={"./about"}>
-              <Button className="w-80">
-                About page
+              <Button className="w-80 transition-all gap-1 hover:gap-2">
+                About page <ArrowRightIcon />
               </Button>
             </Link>
             <p className="text-sm mt-2 font-thin opacity-65">for read more about me</p>
@@ -143,19 +143,13 @@ const GetbackListInListLINK = ({ data }: { data: IData | undefined }) => {
           {data?.personalDetail.links.map((item, index) => {
             return (
               <Fragment key={index}>
-                <CarouselItem className="basis-1/2 md:basis-1/3 flex justify-center items-center">
-
-
-
-
+                <CarouselItem className="basis-auto md:basis-1/3 flex justify-center items-center">
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
                         <Link href={item.link}>
                           <Card className="flex justify-center items-center gap-3 px-8 py-1 font-thin">
                             <Image src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
-
-
                             <p className="text-nowrap text-sm" >{(item.title).substring(0, 6)}{((item.title).length > 8) && "..."}</p>
                           </Card>
                         </Link>
