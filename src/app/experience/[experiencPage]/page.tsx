@@ -100,7 +100,7 @@ const Page = () => {
                             Source on the
                             {Thisdata?.links[0].link &&
 
-                                <Link href={Thisdata.links[0].link} > <ExternalLinkIcon className="inline" />{Thisdata?.links[0].title}</Link>
+                                <Link href={Thisdata.links[0].link} target="_blank" > <ExternalLinkIcon className="inline" />{Thisdata?.links[0].title}</Link>
 
                             }
 
@@ -111,7 +111,7 @@ const Page = () => {
                             Launch on the
                             {Thisdata?.links[1].link &&
 
-                                <Link href={Thisdata.links[1].link} > <ExternalLinkIcon className="inline" />{Thisdata?.links[1].title}</Link>
+                                <Link href={Thisdata.links[1].link} target="_blank"> <ExternalLinkIcon className="inline" />{Thisdata?.links[1].title}</Link>
 
                             }
                         </h4>
