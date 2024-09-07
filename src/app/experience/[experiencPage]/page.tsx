@@ -98,14 +98,47 @@ const Page = () => {
                     <Card className="py-3 md:w-5/12 w-full px-3 my-2">
                         <h4 className="scroll-m-20 text-sm font-normal tracking-tight">
                             Source on the
-                            <Link href={Thisdata?.links[0].link || ""} passHref={true} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[0].title}</Link>
-                     
+                            <Link href={Thisdata?.links[0].link || ""} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[0].title}</Link>
+                            |
+                            <a
+                                href={Thisdata?.links[0].link}
+
+
+                            >
+                                <ExternalLinkIcon className="inline" />
+                                {Thisdata?.links[0].title}
+                            </a>
+                            |  
+                            <a
+                                href={`//${Thisdata?.links[0].link}`}
+
+
+                            >
+                                <ExternalLinkIcon className="inline" />
+                                {Thisdata?.links[0].title}
+                            </a>
+
+                            |
+
+                            <Link href="//stackoverflow.com/" prefetch={false}>
+                                <button>StackOverflow</button>
+                            </Link>
+                            |
+                            <Link href="https://stackoverflow.com/" passHref={true}>
+                                StackOverflow
+                            </Link>
+                            <Link href={Thisdata?.links[0].link || ""} passHref={true}>
+                                StackOverflow
+                            </Link>
+                            <Link href={`//${Thisdata?.links[0].link || ""}`} passHref={true}>
+                                StackOverflow
+                            </Link>
                         </h4>
                     </Card>
                     <Card className="py-3 md:w-5/12 w-full px-3 my-2">
                         <h4 className="scroll-m-20 text-sm font-normal tracking-tight">
                             Launch on the
-                            <Link href={Thisdata?.links[1].link || ""} passHref={true} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[1].title}</Link>
+                            <Link href={Thisdata?.links[1].link || ""} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[1].title}</Link>
                             |
                             <a
                                 href={Thisdata?.links[1].link}
