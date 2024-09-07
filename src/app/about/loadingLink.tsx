@@ -76,7 +76,7 @@ const Linkisaboutpage = () => {
 
                     <TooltipTrigger asChild className="flex items-center">
                         <span>
-                            <Dialog title="Email" data={data?.personalDetail.Phone + ""}>
+                            <Dialog title="phone" data={data?.personalDetail.Phone + ""}>
                                 <ChatBubbleIcon />
                             </Dialog>
                         </span>
@@ -109,8 +109,6 @@ const Imagewithloading = (prop: IImage) => {
 
     const { item, index, DAtalenght } = prop
 
-
-    const [loading, setloading] = useState(true)
     return (
         <>
 
@@ -122,13 +120,7 @@ const Imagewithloading = (prop: IImage) => {
 
                         <Link href={item.link}>
 
-                            {/* <Image style={{ display: loading ? "none" : "block" }} onLoad={() => {
-                                console.log(item.title + " loaded")
-                                setloading(false)
-
-                            }} src={"https://icon.horse/icon/" + extractDomain(item.link) } alt={item.title} width={24} height={24} />
-                           
-                            {loading && <ReloadIcon className="animate-spin" />} */}
+                         
 
 
                             <Image src={"https://icon.horse/icon/" + extractDomain(item.link)} alt={item.title} width={24} height={24} />
