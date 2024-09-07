@@ -101,9 +101,9 @@ const Page = () => {
                             <Link href={Thisdata?.links[0].link || ""} target="_blank" rel="noopener noreferrer"> <ExternalLinkIcon className="inline" />{Thisdata?.links[0].title}</Link>
                            |
                             <a
-                                href={Thisdata?.links[0].link}
+                                href={`${Thisdata?.links[0].link}/`}
                                 target="_blank"
-                                rel="noopener noreferrer"
+                              
                             >
                                 <ExternalLinkIcon className="inline" />
                                 {Thisdata?.links[0].title}
