@@ -1,0 +1,19 @@
+{
+    "short_name": "mohammad | portfolio",
+    "name": "mosayyebnezhad 🚀 React developer",
+    "icons": [
+      {
+        "src": "/logo.svg",
+        
+        "sizes": "any"
+      }
+      
+    ],
+    "start_url": "./",
+    "description":"Protfolio Of mosayyebnezhad 🚀 React developer",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000000"
+  }
+  

@@ -3,13 +3,12 @@ import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "./Components/ShadcnComp/components/ui/sonner";
 import { ThemeProvider } from "./Components/ShadcnComp/components/theme-provider";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { Context } from "./Context";
 import Navbar from "./Components/Navbar/navbar";
 import Footer from "./Components/footer/footer";
 import NextTopLoader from 'nextjs-toploader';
-
-
+import ClientComp from "./Clinet";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,11 +16,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "mosayyebnezhad | personal website",
+
   
+
+  
+  title: "mosayyebnezhad | personal website",
+  manifest: "./manifest.json",
   description: "Protfolio Of mosayyebnezhad 🚀 React developer",
 };
-
 
 
 export default function RootLayout({
@@ -58,6 +60,7 @@ export default function RootLayout({
         >
 
           <Context>
+            <ClientComp/>
             <Navbar />
             {children}
             <Footer />
