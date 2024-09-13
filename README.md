@@ -3,45 +3,20 @@ A cutting-edge, professional-grade website template built with the latest web te
 
 ![ImagePresentation](./Data/Presentation.svg)
 
-This is a sample portfolio website built using Next.js.
-
-## Figma
-
-This project was designed in Figma before starting.
-
-[Memoist](https://www.figma.com/Unknown!) on Figma
 
 ## Table of Contents
-
-- [Demo](#demo)
-- [Features](#features)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
-## Demo
+## usage
 
-You can check out the live demo of the website [here](https://Unknown!).
+- clone it
+- change Data.json File ```src/app/assets/Data.json```
+- enjoy !
 
-## Features
+## technologies-used
 
-- Responsive design
-- Projects showcase
-- Skills display
-- Contact form
-- Clean and modern UI
-
-## Installation
-
-To get a local copy up and running follow these simple steps:
-
-1. **Clone the repository**
-
-```bash
-- git clone https://github.com/mosayyebnezhad/ProWeb
-
-- npm i
-```
+- [ ] react
+- [ ] next
+- [ ] tailwindcss
+- [ ] shadcn UI
