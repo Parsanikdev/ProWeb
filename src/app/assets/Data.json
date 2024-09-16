@@ -128,7 +128,6 @@
                 "next",
                 "tailwind",
                 "shadcnUI",
-                "express",
                 "reactquery",
                 "redux"
             ],
@@ -139,7 +138,7 @@
                 },
                 {
                     "title": "vercel",
-                    "link": "https://mosayyebnezhad.ir/"
+                    "link": "https://memoist.vercel.app/"
                 }
             ]
         }
