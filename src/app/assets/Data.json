@@ -127,9 +127,8 @@
             "skills": [
                 "next",
                 "tailwind",
-                "shadcnUI",
-                "reactquery",
-                "redux"
+                "nextUI",
+                "reactquery"
             ],
             "links": [
                 {
