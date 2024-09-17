@@ -43,15 +43,15 @@
                 "react",
                 "next",
                 "typescript",
-                "tailwind"
+                "tailwindcss"
             ]
         },
         {
             "sideName": "back-end developer",
             "skills": [
                 "express",
-                "Go",
-                "mongoDB"
+                "mongoDB",
+                "mongoose"
             ]
         }
     ],
