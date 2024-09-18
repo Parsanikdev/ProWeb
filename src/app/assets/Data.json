@@ -140,6 +140,35 @@
                     "link": "https://memoist.vercel.app/"
                 }
             ]
+        },
+        {
+            "title": "InfoVerse",
+            "id": "infoverse",
+            "rule": "front-end developer",
+            "Image": "https://github.com/mosayyebnezhad/infoverse/raw/main/Data/Presentation.svg",
+            "Date": {
+                "from": "2024-sep-17",
+                "to": "2024-sep-18"
+            },
+            "shortdescryiption": "The universe of information",
+            "description": "InfoVerse is a modern and updated encyclopedia that allows you to easily access a vast range of information and knowledge across various fields. With its innovative design and user-friendly interface, InfoVerse offers an engaging and straightforward experience for searching and exploring content. Our goal is to provide a reliable and trustworthy resource of knowledge that helps users find and utilize the information they need with greater confidence.",
+            "skills": [
+                "next",
+                "tailwind",
+                "shadcnUI",
+                "SSR",
+                "ISR"
+            ],
+            "links": [
+                {
+                    "title": "github",
+                    "link": "https://github.com/mosayyebnezhad/infoverse"
+                },
+                {
+                    "title": "vercel",
+                    "link": "https://infoverse.mosayyebnezhad.ir"
+                }
+            ]
         }
     ],
     "Domain": "http://mosayyebnezhad.ir"
