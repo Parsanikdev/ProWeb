@@ -1,10 +1,10 @@
 {
     "personalDetail": {
-        "name": "mohammad",
-        "family": "mosayyebnezhad",
-        "birthDay": 2004,
+        "name": "parsa",
+        "family": "niksirat",
+        "birthDay": 2005,
         "description": "🚀 Software Engineer",
-        "longdescription": "I'm Mohammad Hasan, a passionate software developer with a deep interest in programming and technology. From a young age, I was drawn to the world of coding and IT, and over the years, I have honed my skills in various fields such as web development, application design, and modern software solutions.I specialize in programming languages like JavaScript, Node.js, and have experience working with frameworks like Next.js. My goal is to continuously grow as a developer, always learning new technologies and improving my craft to deliver high-quality, efficient software solutions.",
+        "longdescription": "I'm parsa, a passionate software developer with a deep interest in programming and technology. From a young age, I was drawn to the world of coding and IT, and over the years, I have honed my skills in various fields such as web development, application design, and modern software solutions.I specialize in programming languages like JavaScript, Node.js, and have experience working with frameworks like Next.js. My goal is to continuously grow as a developer, always learning new technologies and improving my craft to deliver high-quality, efficient software solutions.",
         "location": "Gilan, iran",
         "imageLink": "https://mosayyebnezhad.github.io/personalData/images/main.png",
         "links": [
